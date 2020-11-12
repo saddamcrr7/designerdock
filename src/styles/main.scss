@@ -17,6 +17,7 @@
 @import "~bootstrap/scss/_type";
 @import "~bootstrap/scss/_transitions";
 
-// block jobs
+// block
+@import 'blocks/hero/hero';
 @import 'blocks/job/job-cards';
 @import 'blocks/job/job';

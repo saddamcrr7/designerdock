@@ -1,0 +1,85 @@
+.main-navbar {
+  background: $white;
+  border-radius: 5px;
+  box-shadow: 0 3px 30px #00000033;
+  padding: 21px 29px 21px 28px;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__brand {
+    font-size: 21px;
+    text-transform: uppercase;
+    color: #0B0B0B;
+    letter-spacing: 0.21px;
+    font-weight: bold;
+    line-height: 20px;
+    margin-left: 242px;
+    text-shadow: 0 3px 6px #0000001A;
+
+    &:hover {
+      color: #0B0B0B;
+      text-decoration: none;
+    }
+  }
+
+  &__left {
+    display: flex;
+  }
+
+  &__search-input {
+    width: 130px;
+    height: 28px;
+    font-size: 13px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    transition: 0.3s;
+    letter-spacing: 0.13px;
+    padding-left: 10px;
+    padding-right: 30px;
+
+    &:focus {
+      outline: none;
+      border: 1px solid #DDDDDD;
+    }
+
+    &::placeholder {
+      color: #DDDDDD;
+      font-size: 13px;
+    }
+  }
+
+  &__menu-toggler {
+    position: relative;
+    width: 23px;
+    height: 18px;
+    cursor: pointer;
+
+    span {
+      position: absolute;
+      left: 0;
+      height: 3px;
+      width: 100%;
+      background-color: #DDDDDD;
+      border-radius: 2px;
+      display: block;
+
+      &:nth-child(1) {
+        top: 0;
+      }
+
+      &:nth-child(2) {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      &:nth-child(3) {
+        bottom: 0;
+        width: 70%;
+      }
+    }
+  }
+}

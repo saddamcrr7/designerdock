@@ -17,6 +17,11 @@
 @import "~bootstrap/scss/_type";
 @import "~bootstrap/scss/_transitions";
 
+// components
+@import 'components/header/header';
+@import 'components/header/main-navbar';
+@import 'components/header/lng-switch';
+
 // block
 @import 'blocks/hero/hero';
 @import 'blocks/job/job-cards';

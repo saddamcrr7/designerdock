@@ -1,0 +1,22 @@
+// Required bootstrap Files
+@import "~bootstrap/scss/_functions";
+@import "~bootstrap/scss/_variables";
+@import "~bootstrap/scss/_mixins";
+
+// Required coustom Files
+@import "settings";
+@import "mixin";
+@import "fonts";
+@import "functions";
+@import "variables";
+
+// Optional bootstrap Files
+@import "~bootstrap/scss/_reboot";
+@import "~bootstrap/scss/_root";
+@import "~bootstrap/scss/_grid";
+@import "~bootstrap/scss/_type";
+@import "~bootstrap/scss/_transitions";
+
+// block jobs
+@import 'blocks/job/job-cards';
+@import 'blocks/job/job';

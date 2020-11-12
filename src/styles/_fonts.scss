@@ -1,0 +1,9 @@
+@include font-face('PFDINDisplayPro', 'PFDINDisplayPro-Regular');
+@include font-face('PFDINDisplayPro', 'PFDINDisplayPro-Medium', medium);
+@include font-face('PFDINDisplayPro', 'PFDINDisplayPro-Bold', bold);
+@include font-face('PFDINDisplayPro', 'PFDINDisplayPro-Light', lighter);
+
+$PFDINDisplayPro : 'PFDINDisplayPro', sans-serif;;
+
+$font-family-base: $PFDINDisplayPro;
+$headings-font-family: $PFDINDisplayPro;

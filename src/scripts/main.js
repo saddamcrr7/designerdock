@@ -1,5 +1,5 @@
-import { Swiper, Navigation, Pagination } from 'swiper';
-Swiper.use([Navigation, Pagination]);
+import { Swiper, Navigation, Pagination, Autoplay } from 'swiper';
+Swiper.use([Navigation, Pagination, Autoplay]);
 
 const jobCardSlider = new Swiper('.block-job__slider', {
   slidesPerView: 'auto',
@@ -17,6 +17,9 @@ const jobCardSlider = new Swiper('.block-job__slider', {
 
 let interleaveOffset = 0.5;
 const creativeSlider = new Swiper('.block-creative__slider', {
+  autoplay: {
+    delay: 3000
+  },
   loop: true,
   speed: 1000,
   watchSlidesProgress: true,

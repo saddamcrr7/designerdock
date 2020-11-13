@@ -1,0 +1,33 @@
+.select {
+  position: relative;
+  z-index: 22;
+
+  &__selected {
+    background-color: $white;
+    cursor: pointer;
+  }
+
+
+  &__body {
+    position: absolute;
+    top: calc(100% + 8px);
+    width: 100%;
+    left: 0;
+    backdrop-filter: blur(30px) brightness(0.8);
+    border-radius: 15px;
+    overflow: hidden;
+  }
+
+  &__item {
+    padding: 13px 24px;
+    cursor: pointer;
+    font-size: 14px;
+    letter-spacing: -0.35px;
+    line-height: 17px;
+
+    &.is-active {
+      background-color: #2F2F2F;
+      color: $white;
+    }
+  }
+}

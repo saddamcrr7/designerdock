@@ -1,0 +1,86 @@
+.block-change {
+  padding: {
+    top: 50px;
+    bottom: 48px;
+  }
+
+  background: $light-green;
+
+  &__container {
+    @include make-container();
+    max-width: 669px + $grid-gutter-width;
+  }
+
+  &__title {
+    font-size: 53px;
+    line-height: 59px;
+    letter-spacing: 0;
+    color: $white;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 4px;
+
+    span {
+      display: block;
+      color: $black;
+    }
+  }
+
+  &__sub {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: $white;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 34px;
+  }
+
+  &__form {}
+
+  &__form-row {
+    display: flex;
+    margin-left: - $grid-gutter-width / 2;
+    margin-right: - $grid-gutter-width / 2;
+  }
+
+  &__form-col {
+    @include make-col-ready();
+    @include make-col(6)
+  }
+
+  &__input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 31px;
+  }
+
+  &__input-label {
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 17px;
+    color: $white;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+
+  &__input {
+    width: 100%;
+    border: none;
+    padding: 13px 21px;
+    box-shadow: 0 3px 20px #00000029;
+    border-radius: 10px;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 17px;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0px 20px #00000029;
+    }
+
+    &::placeholder {
+      color: rgba(#969696, 0.47);
+    }
+  }
+}

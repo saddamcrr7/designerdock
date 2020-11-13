@@ -21,6 +21,7 @@
 @import 'components/header/header';
 @import 'components/header/main-navbar';
 @import 'components/header/lng-switch';
+@import 'components/select';
 
 // block
 @import 'blocks/hero/hero';
@@ -29,3 +30,4 @@
 @import 'blocks/job/job';
 @import 'blocks/apply/apply-card';
 @import 'blocks/apply/apply';
+@import './blocks/change/change';

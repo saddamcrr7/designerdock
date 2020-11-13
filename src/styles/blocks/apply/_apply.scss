@@ -1,0 +1,16 @@
+.block-apply {
+  padding: {
+    top: 76px;
+    bottom: 78px;
+  }
+  background: $light-green;
+
+  &__container {
+    @include make-container();
+    max-width: 1145px + $grid-gutter-width;
+  }
+
+  .apply-card:first-child {
+    margin-bottom: 70px;
+  }
+}

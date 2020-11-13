@@ -1,4 +1,9 @@
-import { Swiper, Navigation, Pagination, Autoplay } from 'swiper';
+import {
+  Swiper,
+  Navigation,
+  Pagination,
+  Autoplay
+} from 'swiper';
 Swiper.use([Navigation, Pagination, Autoplay]);
 
 const jobCardSlider = new Swiper('.block-job__slider', {
@@ -60,3 +65,35 @@ const creativeSlider = new Swiper('.block-creative__slider', {
     }
   }
 })
+
+
+// selects
+const slectElms = document.querySelectorAll('.select');
+
+if (slectElms) {
+  slectElms.forEach(slectElm => {
+    const selected = slectElm.querySelector('.select__selected')
+    const body = slectElm.querySelector('.select__body')
+    const items = slectElm.querySelector('.select__items')
+    const item = slectElm.querySelectorAll('.select__item')
+    const icon =slectElm.querySelector('.select__selected-icon')
+    let isOpen = 0
+
+
+    selected.addEventListener('click', () => {
+      if (isOpen == 0) {
+        body.style.height = `${items.offsetHeight}px`
+        slectElm.classList.add('is-active')
+        icon.style.transform = 'rotate(90deg)'
+        isOpen = !0
+      } else {
+        body.style.height = `0px`
+        slectElm.classList.remove('is-active')
+        icon.style.transform = 'rotate(0deg)'
+        isOpen = 0
+      }
+    })
+
+
+  })
+}

@@ -1,10 +1,12 @@
 .switch {
-  $root : &;
+  $root: &;
+  position: relative;
 
   &__row {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 16px;
   }
 
   &__label {
@@ -68,13 +70,89 @@
     justify-content: flex-end;
   }
 
+  &__input-group {
+    height: 0px;
+    overflow: hidden;
+    transition: 0.3s ease;
+    position: relative;
+  }
+
+  &__input-inner {
+    display: flex;
+    align-items: center;
+    background-color: #2F2F2F;
+    border-radius: 8px;
+    padding: 10px 9px;
+    padding-left: 20px;
+    transition: 0.3s;
+
+    &.is-focus {
+      border-radius: 8px 8px 0 0;
+    }
+  }
+
+  &__input-label {
+    font-size: 13px;
+    line-height: 16px;
+    margin-right: 13px;
+    color: $white;
+  }
+
+  &__input {
+    max-width: 203px;
+    height: 25px;
+    background: transparent;
+    border: 1px solid $white;
+    border-radius: 8px;
+    font-size: 13px;
+    color: $white;
+    padding: 5px 10px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__input-suggest {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(30px) brightness(0.5);
+    background-color: rgba($light-green, 0.4);
+    height: 0px;
+    border: 0 0 15px 15px;
+    overflow: hidden;
+    transition: 0.3s ease;
+  }
+
+  &__input-suggest-inner {
+    padding: 16px;
+  }
+
+  &__input-suggest-title {
+    font-size: 13px;
+    color: #FFFFFFCC;
+    line-height: 26px;
+  }
+
+  &__input-suggest-item {
+    font-size: 13px;
+    font-weight: bold;
+    padding-left: 20px;
+    line-height: 26px;
+    color: #B1C110;
+    cursor: pointer;
+  }
+
   &.is-on {
     #{$root} {
       &__toggler::after {
         left: calc(100% - 25px);
       }
 
-      &__yes, &__no {
+      &__yes,
+      &__no {
         transform: translateX(0);
       }
     }

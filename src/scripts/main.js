@@ -141,18 +141,46 @@ const switchElms  = document.querySelectorAll('.switch')
 if(switchElms) {
   switchElms.forEach(switchElm => {
     let isOn = 0
-
-    switchElm.addEventListener('click', ()=> {
+    const toogler = switchElm.querySelector('.switch__toggler')
+    const inputGroup = switchElm.querySelector('.switch__input-group')
+    const inputInner= switchElm.querySelector('.switch__input-inner')
+    const input = switchElm.querySelector('.switch__input')
+    const suggestELm = switchElm.querySelector('.switch__input-suggest')
+    const sgItmes = switchElm.querySelectorAll('.switch__input-suggest-item')
+    toogler.addEventListener('click', ()=> {
       if(isOn == 0) {
         isOn = !0
         switchElm.classList.add('is-on')
         switchElm.classList.remove('is-off')
+        inputGroup.style.height = `${inputInner.offsetHeight}px`
       }else {
         isOn = 0
         switchElm.classList.remove('is-on')
         switchElm.classList.add('is-off')
-      }
+        inputGroup.style.height = `0px`
 
+      }
     })
+
+    if(suggestELm) {
+      input.addEventListener('focus', (e)=> {
+        suggestELm.style.height = '400px'
+        inputInner.classList.add('is-focus')
+      })
+
+      input.addEventListener('blur', (e)=> {
+        suggestELm.style.height = '0px'
+        inputInner.classList.remove('is-focus')
+      })
+
+      sgItmes.forEach(sgItme => {
+        sgItme.addEventListener('click', ()=> {
+          input.value = sgItme.innerText
+
+          console.log(sgItme.innerText);
+        })
+      })
+
+    }
   })
 }

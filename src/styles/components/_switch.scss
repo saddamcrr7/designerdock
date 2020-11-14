@@ -1,0 +1,82 @@
+.switch {
+  $root : &;
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__label {
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 17px;
+    color: $white;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+
+  &__toggler {
+    width: 61px;
+    height: 28px;
+    overflow: hidden;
+    border-radius: 40px;
+    display: flex;
+    position: relative;
+    cursor: pointer;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      background-color: $white;
+      width: 22px;
+      height: 22px;
+      border-radius: 15px;
+      transition: 0.3s ease-in;
+    }
+  }
+
+  &__yes,
+  &__no {
+    width: 61px;
+    height: 100%;
+    flex: 0 0 auto;
+    font-size: 9px;
+    letter-spacing: 0;
+    line-height: 10px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0 10px;
+    color: $white;
+    pointer-events: none;
+    transition: 0.3s ease-in;
+    border-radius: 15px;
+  }
+
+  &__yes {
+    background-color: #C5D806;
+    transform: translateX(-100%);
+  }
+
+  &__no {
+    background-color: #8C980E;
+    transform: translateX(-100%);
+    justify-content: flex-end;
+  }
+
+  &.is-on {
+    #{$root} {
+      &__toggler::after {
+        left: calc(100% - 25px);
+      }
+
+      &__yes, &__no {
+        transform: translateX(0);
+      }
+    }
+  }
+}

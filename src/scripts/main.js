@@ -131,3 +131,28 @@ if (slectElms) {
 
   })
 }
+
+
+
+// switchs
+
+const switchElms  = document.querySelectorAll('.switch')
+
+if(switchElms) {
+  switchElms.forEach(switchElm => {
+    let isOn = 0
+
+    switchElm.addEventListener('click', ()=> {
+      if(isOn == 0) {
+        isOn = !0
+        switchElm.classList.add('is-on')
+        switchElm.classList.remove('is-off')
+      }else {
+        isOn = 0
+        switchElm.classList.remove('is-on')
+        switchElm.classList.add('is-off')
+      }
+
+    })
+  })
+}

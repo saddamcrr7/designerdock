@@ -74,15 +74,15 @@ if (slectElms) {
   slectElms.forEach(slectElm => {
     const selected = slectElm.querySelector('.select__selected')
     const body = slectElm.querySelector('.select__body')
-    const items = slectElm.querySelector('.select__items')
-    const item = slectElm.querySelectorAll('.select__item')
-    const icon =slectElm.querySelector('.select__selected-icon')
+    const itemsElm = slectElm.querySelector('.select__items')
+    const items = slectElm.querySelectorAll('.select__item')
+    const icon = slectElm.querySelector('.select__selected-icon')
     let isOpen = 0
 
 
     selected.addEventListener('click', () => {
       if (isOpen == 0) {
-        body.style.height = `${items.offsetHeight}px`
+        body.style.height = `${itemsElm.offsetHeight}px`
         slectElm.classList.add('is-active')
         icon.style.transform = 'rotate(90deg)'
         isOpen = !0
@@ -92,6 +92,40 @@ if (slectElms) {
         icon.style.transform = 'rotate(0deg)'
         isOpen = 0
       }
+    })
+
+    items.forEach((item, i) => {
+      const tags = item.querySelectorAll('.select__tag')
+
+      tags.forEach(tag => {
+        let isActive = 0
+
+        tag.addEventListener('click', () => {
+
+          items.forEach((ite, j) => {
+            if (j !== i) {
+              ite.classList.remove('is-active')
+              const ltags = ite.querySelectorAll(
+                '.select__tag')
+              ltags.forEach((ltag, k) => {
+                ltag.classList.remove('is-active')
+              })
+            }
+            else {
+              ite.classList.add('is-active')
+            }
+          })
+
+
+          if (isActive == 0) {
+            tag.classList.add('is-active')
+            isActive = !0
+          } else {
+            tag.classList.remove('is-active')
+            isActive = 0
+          }
+        })
+      })
     })
 
 

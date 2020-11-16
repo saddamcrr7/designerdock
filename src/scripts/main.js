@@ -84,7 +84,7 @@ if (slectElms) {
       if (isOpen == 0) {
         body.style.height = `${itemsElm.offsetHeight}px`
         slectElm.classList.add('is-active')
-        icon.style.transform = 'rotate(90deg)'
+        icon.style.transform = 'rotate(180deg)'
         isOpen = !0
       } else {
         body.style.height = `0px`
@@ -101,21 +101,6 @@ if (slectElms) {
         let isActive = 0
 
         tag.addEventListener('click', () => {
-
-          items.forEach((ite, j) => {
-            if (j !== i) {
-              ite.classList.remove('is-active')
-              const ltags = ite.querySelectorAll(
-                '.select__tag')
-              ltags.forEach((ltag, k) => {
-                ltag.classList.remove('is-active')
-              })
-            }
-            else {
-              ite.classList.add('is-active')
-            }
-          })
-
 
           if (isActive == 0) {
             tag.classList.add('is-active')
@@ -182,5 +167,24 @@ if(switchElms) {
       })
 
     }
+  })
+}
+
+// lng switch
+
+const lsElm = document.querySelector('.lng-switch')
+const enBtn = document.querySelector('.lng-switch__btn--en')
+const dtBtn = document.querySelector('.lng-switch__btn--dt')
+
+
+if(lsElm) {
+  enBtn.addEventListener('click', ()=> {
+    lsElm.classList.add('is-en')
+    lsElm.classList.remove('is-dt')
+  })
+
+  dtBtn.addEventListener('click', ()=> {
+    lsElm.classList.add('is-dt')
+    lsElm.classList.remove('is-en')
   })
 }

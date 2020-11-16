@@ -6,7 +6,21 @@
 
   &__selected {
     background-color: $white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     cursor: pointer;
+  }
+
+  &__selected-right {
+    display: flex;
+    align-items: center;
+  }
+
+  &__selected-icon {
+    height: 5px;
+    width: 8px;
+    transition: 0.3s ease;
   }
 
 
@@ -40,7 +54,7 @@
     color: $white;
     transition: 0.3s ease;
 
-    &.is-active {
+    &:hover {
       background-color: #2F2F2F;
     }
   }

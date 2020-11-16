@@ -20,6 +20,7 @@
     left: 1px;
     border-radius: 20px;
     z-index: 1;
+    transition: 0.3s ease;
   }
 
   &__btn {
@@ -30,6 +31,7 @@
     font-size: 10px;
     font-weight: bold;
     color: #9C9C9C;
+    transition: color 0.3s ease;
   }
 
   &.is-dt {
@@ -41,8 +43,8 @@
     }
 
     &::before {
-      left: auto;
-      right: 1px;
+      left: 100%;
+      transform: translateX(-100%);
     }
   }
 
@@ -55,10 +57,7 @@
     }
 
     &::before {
-      left: auto;
       left: 1px;
     }
   }
 }
-
-

@@ -34,8 +34,8 @@
     font-size: 30px;
     color: $black;
     text-transform: uppercase;
-    margin-bottom: 22px;
-    line-height: 37px;
+    margin-bottom: 20px;
+    line-height: 35px;
     letter-spacing: 0.6px;
     font-weight: 500;
   }
@@ -52,11 +52,17 @@
 
   &__cta {
     font-size: 14px;
+    display: flex;
+    align-items: center;
 
     &, &:hover {
       color: $red;
       text-decoration: none;
     }
+  }
+
+  &__cta-icon {
+    margin-left: 8px;
   }
 
   &__btns {

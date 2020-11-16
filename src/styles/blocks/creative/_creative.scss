@@ -72,9 +72,16 @@
     z-index: 3;
     border-radius: 22px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &--prev {
       left: -8px;
+
+      img {
+        transform: rotate(-180deg);
+      }
     }
 
     &--next {

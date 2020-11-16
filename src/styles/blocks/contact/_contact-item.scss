@@ -1,0 +1,49 @@
+.contact-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 44px;
+  max-width: 160px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__loc {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0;
+    color: $black;
+    text-transform: uppercase;
+  }
+
+  &__right {
+    display: flex;
+  }
+
+  &__icon {
+    background: $light-green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 7px;
+    border: 1px solid $light-green;
+
+    &, svg path {
+      transition: 0.2s ease-in;
+    }
+
+    &:hover {
+      background-color: $white;
+
+      svg path{
+        fill: $light-green;
+      }
+    }
+  }
+}

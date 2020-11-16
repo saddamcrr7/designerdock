@@ -24,6 +24,10 @@
     display: flex;
   }
 
+  &__search-wrapper {
+    position: relative;
+  }
+
   &__search-input {
     width: 130px;
     height: 28px;
@@ -44,6 +48,19 @@
       color: #DDDDDD;
       font-size: 13px;
     }
+  }
+
+  &__search-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 14px;
+    width: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 7px;
+    cursor: pointer;
   }
 
   &__menu-toggler {

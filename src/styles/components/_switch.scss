@@ -122,14 +122,38 @@
     backdrop-filter: blur(30px) brightness(0.5);
     background-color: rgba($light-green, 0.4);
     height: 0px;
-    border: 0 0 15px 15px;
+    border-radius: 0 0 15px 15px;
     overflow: hidden;
-    transition: 0.3s ease;
+    transition: 1s ease-in-out;
     z-index: 22;
+    padding-right: 6px;
   }
 
   &__input-suggest-inner {
     padding: 16px;
+    height: inherit;
+    overflow-y: auto;
+
+    /* width */
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: rgba(#2F2F2F, 0.3);
+      border-radius: 5px;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: rgba(#2F2F2F, 0.3);
+    }
   }
 
   &__input-suggest-title {

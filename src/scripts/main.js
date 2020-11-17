@@ -67,6 +67,61 @@ const creativeSlider = new Swiper('.block-creative__slider', {
 })
 
 
+// menu
+const menuElm = document.querySelector('.main-navbar__menu')
+if (menuElm) {
+  const menuToogler = menuElm.querySelector('.main-navbar__menu-toggler')
+  const menuInner = menuElm.querySelector('.main-navbar__menu-inner')
+  const menuBody = menuElm.querySelector('.main-navbar__menu-body')
+  let isOpen = 0
+
+  menuToogler.addEventListener('click', () => {
+    if (isOpen == 0) {
+      isOpen = !0
+      menuBody.style.height = `${menuInner.offsetHeight}px`
+      menuElm.classList.add('is-active')
+    } else {
+      isOpen = 0
+      menuBody.style.height = '0px'
+      menuElm.classList.remove('is-active')
+    }
+  })
+
+
+  const dropdwonItems = document.querySelectorAll(
+    '.main-navbar__menu-item--dropdown')
+
+  dropdwonItems.forEach(dropdwonItem => {
+    const toggler = dropdwonItem.querySelector('.main-navbar__menu-row')
+    const lists = dropdwonItem.querySelector('.main-navbar__dropdown-items')
+    const wrapper = dropdwonItem.querySelector(
+      '.main-navbar__dropdown-wrapper')
+    const icon = dropdwonItem.querySelector('.main-navbar__menu-icon')
+    let isOpen = 0
+
+    toggler.addEventListener('click', () => {
+
+      menuBody.style.height = 'auto'
+      lists.addEventListener('transitionend', () => {
+        menuBody.style.height = `${menuInner.offsetHeight}px`
+      })
+
+      if (isOpen == 0) {
+        isOpen = !0
+        lists.style.height = `${wrapper.offsetHeight}px`
+        icon.style.transform = 'rotate(-180deg)'
+      } else {
+        isOpen = 0
+        lists.style.height = '0px'
+        icon.style.transform = 'rotate(0deg)'
+      }
+    })
+
+  })
+}
+
+
+
 // selects
 const slectElms = document.querySelectorAll('.select');
 
@@ -121,24 +176,25 @@ if (slectElms) {
 
 // switchs
 
-const switchElms  = document.querySelectorAll('.switch')
+const switchElms = document.querySelectorAll('.switch')
 
-if(switchElms) {
+if (switchElms) {
   switchElms.forEach(switchElm => {
     let isOn = 0
     const toogler = switchElm.querySelector('.switch__toggler')
     const inputGroup = switchElm.querySelector('.switch__input-group')
-    const inputInner= switchElm.querySelector('.switch__input-inner')
+    const inputInner = switchElm.querySelector('.switch__input-inner')
     const input = switchElm.querySelector('.switch__input')
     const suggestELm = switchElm.querySelector('.switch__input-suggest')
-    const sgItmes = switchElm.querySelectorAll('.switch__input-suggest-item')
-    toogler.addEventListener('click', ()=> {
-      if(isOn == 0) {
+    const sgItmes = switchElm.querySelectorAll(
+      '.switch__input-suggest-item')
+    toogler.addEventListener('click', () => {
+      if (isOn == 0) {
         isOn = !0
         switchElm.classList.add('is-on')
         switchElm.classList.remove('is-off')
         inputGroup.style.height = `${inputInner.offsetHeight}px`
-      }else {
+      } else {
         isOn = 0
         switchElm.classList.remove('is-on')
         switchElm.classList.add('is-off')
@@ -147,19 +203,19 @@ if(switchElms) {
       }
     })
 
-    if(suggestELm) {
-      input.addEventListener('focus', (e)=> {
+    if (suggestELm) {
+      input.addEventListener('focus', (e) => {
         suggestELm.style.height = '400px'
         inputInner.classList.add('is-focus')
       })
 
-      input.addEventListener('blur', (e)=> {
+      input.addEventListener('blur', (e) => {
         suggestELm.style.height = '0px'
         inputInner.classList.remove('is-focus')
       })
 
       sgItmes.forEach(sgItme => {
-        sgItme.addEventListener('click', ()=> {
+        sgItme.addEventListener('click', () => {
           input.value = sgItme.innerText
 
           console.log(sgItme.innerText);
@@ -177,13 +233,13 @@ const enBtn = document.querySelector('.lng-switch__btn--en')
 const dtBtn = document.querySelector('.lng-switch__btn--dt')
 
 
-if(lsElm) {
-  enBtn.addEventListener('click', ()=> {
+if (lsElm) {
+  enBtn.addEventListener('click', () => {
     lsElm.classList.add('is-en')
     lsElm.classList.remove('is-dt')
   })
 
-  dtBtn.addEventListener('click', ()=> {
+  dtBtn.addEventListener('click', () => {
     lsElm.classList.add('is-dt')
     lsElm.classList.remove('is-en')
   })

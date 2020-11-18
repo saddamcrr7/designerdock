@@ -90,4 +90,35 @@
 
     }
   }
+
+  &__item-checkbox {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    border: 1px solid $white;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.3s ease;
+
+    &::before {
+      content: "\2713";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 12px;
+      color: $white;
+      opacity: 0;
+      transition: 0.3s ease;
+    }
+
+    &.is-checked {
+      border-color: $light-green;
+      background-color: $light-green;
+
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
 }

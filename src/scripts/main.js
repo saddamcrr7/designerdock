@@ -151,7 +151,7 @@ if (slectElms) {
 
     items.forEach((item, i) => {
       const tags = item.querySelectorAll('.select__tag')
-
+      const checkboxs = item.querySelectorAll('.select__item-checkbox')
       tags.forEach(tag => {
         let isActive = 0
 
@@ -163,6 +163,22 @@ if (slectElms) {
           } else {
             tag.classList.remove('is-active')
             isActive = 0
+          }
+        })
+      })
+
+      checkboxs.forEach(checkbox => {
+        let ischecked = 0
+        checkbox.addEventListener('click', (e)=> {
+          console.log(item);
+          if(ischecked == 0) {
+            ischecked = !0
+            checkbox.classList.add('is-checked')
+            item.classList.add('is-select')
+          }else {
+            ischecked = 0
+            checkbox.classList.remove('is-checked')
+            item.classList.remove('is-select')
           }
         })
       })

@@ -36,9 +36,6 @@
     margin-bottom: 34px;
   }
 
-  &__form {
-
-  }
 
   &__form-row {
     width: 100%;
@@ -79,12 +76,12 @@
     width: 100%;
     border: none;
     padding: 13px 21px;
-    box-shadow: -.25rem -.25rem .5rem rgba(#fff,.07),
-    .25rem .25rem .5rem rgba(#000,.12),
-    -.75rem -.75rem 1.75rem rgba(#fff,.06),
-    .75rem .75rem 1.75rem rgba(#000,.10),
-    inset 8rem 8rem 8rem rgba(#000,.02),
-    inset -8rem -8rem 8rem rgba(#fff,.02);
+    box-shadow: -.25rem -.25rem .5rem rgba(#fff, .07),
+      .25rem .25rem .5rem rgba(#000, .12),
+      -.75rem -.75rem 1.75rem rgba(#fff, .06),
+      .75rem .75rem 1.75rem rgba(#000, .10),
+      inset 8rem 8rem 8rem rgba(#000, .02),
+      inset -8rem -8rem 8rem rgba(#fff, .02);
     border-radius: 10px;
     font-size: 14px;
     letter-spacing: 0;
@@ -117,11 +114,42 @@
     transition: 0.3s ease;
 
     &:hover {
-    box-shadow: 0 0px 6px #00000029;
+      box-shadow: 0 0px 6px #00000029;
     }
 
     &:focus {
       outline: none;
     }
+  }
+
+  &__file-input-group {
+    position: relative;
+    width: 100%;
+    border: 2px dashed $white;
+    border-spacing: 5px;
+    border-radius: 8px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 31px;
+  }
+
+  &__file-input-label {
+    margin-bottom: 0;
+    font-size: 13px;
+    color: rgba($black, .83);
+  }
+
+  &__file-input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    opacity: 0;
+    cursor: pointer;
   }
 }

@@ -1,3 +1,4 @@
+import Dropzone from 'dropzone';
 import {
   Swiper,
   Navigation,
@@ -156,7 +157,6 @@ if (slectElms) {
         let isActive = 0
 
         tag.addEventListener('click', () => {
-
           if (isActive == 0) {
             tag.classList.add('is-active')
             isActive = !0
@@ -169,13 +169,13 @@ if (slectElms) {
 
       checkboxs.forEach(checkbox => {
         let ischecked = 0
-        checkbox.addEventListener('click', (e)=> {
+        checkbox.addEventListener('click', (e) => {
           console.log(item);
-          if(ischecked == 0) {
+          if (ischecked == 0) {
             ischecked = !0
             checkbox.classList.add('is-checked')
             item.classList.add('is-select')
-          }else {
+          } else {
             ischecked = 0
             checkbox.classList.remove('is-checked')
             item.classList.remove('is-select')
@@ -183,7 +183,6 @@ if (slectElms) {
         })
       })
     })
-
 
   })
 }
@@ -209,13 +208,16 @@ if (switchElms) {
         isOn = !0
         switchElm.classList.add('is-on')
         switchElm.classList.remove('is-off')
-        inputGroup.style.height = `${inputInner.offsetHeight}px`
+        if (inputGroup) {
+          inputGroup.style.height = `${inputInner.offsetHeight}px`
+        }
       } else {
         isOn = 0
         switchElm.classList.remove('is-on')
         switchElm.classList.add('is-off')
-        inputGroup.style.height = `0px`
-
+        if (inputGroup) {
+          inputGroup.style.height = `0px`
+        }
       }
     })
 

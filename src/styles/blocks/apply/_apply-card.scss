@@ -1,17 +1,16 @@
 .apply-card {
+  $root: &;
+
   width: 100%;
   border-radius: 10px;
   display: flex;
-  height: 273px;
+  min-height: 273px;
   overflow: hidden;
   box-shadow: 0 3px 40px #00000026;
 
-  &--reverse {
-    flex-direction: row-reverse;
-  }
-
   &__left {
     @include make-col(6);
+    position: relative;
   }
 
   &__content {
@@ -19,6 +18,9 @@
   }
 
   &__img {
+    position: absolute;
+    left: 0;
+    right: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -66,12 +68,12 @@
   }
 
   &__btns {
-    margin-top: 20px;
+    margin-top: 17px;
     display: flex;
   }
 
   &__btn {
-    width: 160px;
+    width: 164px;
     margin-right: 11px;
     font-size: 11px;
     letter-spacing: 0.44px;
@@ -108,6 +110,45 @@
       &:hover {
         color: $white;
         background-color: #969696;
+      }
+    }
+  }
+
+  &--reverse {
+    flex-direction: row-reverse;
+
+    #{$root}__content{
+      padding: 41px 58px 38px 52px;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    min-height: 419px;
+
+    &__content {
+      padding: 32px 31px 29px 33px;
+    }
+
+    &__title {
+      font-size: 25px;
+      line-height: 33px;
+    }
+
+    &__sub {
+      height: 170px;
+    }
+
+    &__btns {
+      flex-wrap: wrap;
+    }
+
+    &__btn {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 9px;
+
+      &:last-child {
+        margin-bottom: 0;
       }
     }
   }

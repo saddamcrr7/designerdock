@@ -2,9 +2,9 @@
   $root: &;
 
   width: 100%;
-  height: 754px;
+  height: 750px;
   position: relative;
-  margin-top: -90px;
+  margin-top: -91px;
   z-index: 1;
 
   &__bg {
@@ -15,7 +15,7 @@
     bottom: 0;
     z-index: 1;
     background-image: url("../images/hero-bg.png");
-    background-position: center center;
+    background-position: center 74%;
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -41,8 +41,8 @@
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 0.53px;
-    line-height: 51px;
-    margin-bottom: 0;
+    line-height: 49px;
+    margin-bottom: 2px;
   }
 
   &__title-green {
@@ -52,8 +52,9 @@
   &__sub {
     color: $white;
     font-size: 12px;
-    letter-spacing: 0.25px;
+    letter-spacing: 0.50px;
     font-weight: 500;
+    margin-bottom: 10px;
   }
 
   &__content-row {
@@ -84,7 +85,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    margin-left: 28px;
+    margin-left: 29px;
   }
 
   &__cta {
@@ -92,9 +93,14 @@
     font-weight: 500;
     font-size: 13px;
     transition: 0.3s ease;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
+    letter-spacing: 0.26px;
     display: flex;
     align-items: center;
+
+    &:last-child {
+      margin-bottom: 3px;
+    }
 
     &:hover {
       text-decoration: none;
@@ -118,7 +124,7 @@
   }
 
   &__navbar {
-    margin-bottom: 20px;
+    margin-bottom: 21px;
     display: flex;
     align-items: center;
     background-color: rgba($white, 0.40);
@@ -135,7 +141,7 @@
     letter-spacing: 0.48px;
     line-height: 20px;
     font-weight: bold;
-    padding: 26px 45px;
+    padding: 26px 54px;
     border-left: 1px solid #F8F8F4;
     width: 100%;
     text-align: center;
@@ -150,6 +156,37 @@
       color: $white;
       background-color: rgba($black, 0.2);
       text-decoration: none;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    height: 1007px;
+
+    &__content {
+      padding-left: 0;
+      text-align: center;
+    }
+
+    &__content-row {
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    &__title {
+      font-size: 50px;
+      line-height: 47px;
+    }
+
+    &__sub {
+      font-size: 14px;
+    }
+
+    &__ctas {
+      display: none;
+    }
+
+    &__navbar {
+      margin-bottom: 65px;
     }
   }
 }

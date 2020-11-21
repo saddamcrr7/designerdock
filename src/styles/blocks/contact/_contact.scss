@@ -1,11 +1,11 @@
 .block-contact {
-  padding-top: 168px;
+  padding-top: 181px;
   padding-bottom: 165px;
   background-color: $white;
 
   &__container {
     @include make-container();
-    max-width: 1015px + $grid-gutter-width;
+    max-width: 955px + $grid-gutter-width;
   }
 
   &__row {
@@ -15,12 +15,12 @@
 
   &__col {
     @include make-col-ready();
-    @include make-col(12 / 5)
+    @include make-col(12 / 5.085)
   }
 
   &__title {
-    font-size: 55px;
-    line-height: 55px;
+    font-size: 57px;
+    line-height: 59px;
     margin-bottom: 0;
     text-transform: uppercase;
     font-weight: bold;

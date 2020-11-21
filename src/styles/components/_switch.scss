@@ -15,7 +15,7 @@
     line-height: 17px;
     color: $white;
     margin-bottom: 8px;
-    font-weight: bold;
+    font-weight: 500;
   }
 
   &__toggler {
@@ -45,14 +45,14 @@
     width: 61px;
     height: 100%;
     flex: 0 0 auto;
-    font-size: 9px;
+    font-size: 8px;
     letter-spacing: 0;
     line-height: 10px;
     display: flex;
     align-items: center;
-    font-weight: bold;
+    font-weight: 500;
     text-transform: uppercase;
-    padding: 0 10px;
+    padding: 0 12px;
     color: $white;
     pointer-events: none;
     transition: 0.3s ease-in;
@@ -68,6 +68,7 @@
     background-color: #8C980E;
     transform: translateX(-100%);
     justify-content: flex-end;
+    padding-right: 15px;
   }
 
   &__input-group {
@@ -164,7 +165,7 @@
 
   &__input-suggest-item {
     font-size: 13px;
-    font-weight: bold;
+    font-weight: 500;
     padding-left: 20px;
     line-height: 26px;
     color: #B1C110;

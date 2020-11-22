@@ -2,7 +2,7 @@
   $root: &;
 
   width: 100%;
-  padding-top: 29px;
+  padding-top: 25px;
   padding-bottom: 28px;
   background: $black;
 
@@ -139,7 +139,7 @@
     flex-direction: column;
 
     @include media-breakpoint-up(lg) {
-      margin-top: 6px;
+      margin-top: 7px;
     }
   }
 

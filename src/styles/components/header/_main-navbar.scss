@@ -68,6 +68,14 @@
     justify-content: center;
     right: 1px;
     cursor: pointer;
+
+    @include media-breakpoint-down(md) {
+     &, svg {
+      width: 19px;
+      height: 19px;
+      right: -2px;
+     }
+    }
   }
 
   &__menu-toggler {
@@ -248,12 +256,12 @@
 
     &__search-input {
       position: absolute;
-      right: 0;
+      right: -8px;
       top: 50%;
       transform: translateY(-50%);
       opacity: 0;
 
-      &:hover {
+      &:hover, &:focus {
         opacity: 1;
       }
 

@@ -49,9 +49,12 @@
 
   @include media-breakpoint-down(md) {
     max-width: 100%;
+    padding: 12px 12px 10px 16px;
+    border: 1px solid $light-green;
+    border-radius: 5px;
 
-    &:last-child {
-      margin-bottom: 44px;
+   &, &:last-child {
+      margin-bottom: 20px;
     }
 
   }

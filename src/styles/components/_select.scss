@@ -87,7 +87,7 @@
     #{$root}__items {
       transform: translateY(0);
       opacity: 1;
-    transition-delay: 0.2s;
+      transition-delay: 0.2s;
 
     }
   }
@@ -121,5 +121,9 @@
         opacity: 1;
       }
     }
+  }
+
+  &--z-top {
+    z-index: 25;
   }
 }

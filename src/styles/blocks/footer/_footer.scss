@@ -6,9 +6,17 @@
   padding-bottom: 28px;
   background: $black;
 
+  @include media-breakpoint-down(md) {
+    padding-top: 55px;
+  }
+
   &__container {
     @include make-container();
     max-width: 1265px + $grid-gutter-width;
+
+    @include media-breakpoint-down(md) {
+      max-width: 607px;
+    }
   }
 
   &__row {
@@ -19,30 +27,46 @@
   &__col {
     @include make-col-ready();
 
-    &--left {
-      @include make-col(4.8);
-    }
+    @include media-breakpoint-up(lg) {
+      &--left {
+        @include make-col(4.8);
+      }
 
-    &--right {
-      @include make-col(6);
+      &--right {
+        @include make-col(6);
+      }
     }
   }
 
   &__left {
     display: flex;
     justify-content: space-between;
+
+    @include media-breakpoint-down(md) {
+      padding-left: 7px;
+    }
   }
 
   &__right {
     display: flex;
     justify-content: flex-end;
     padding-top: 3px;
+
+    @include media-breakpoint-down(md) {
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-top: 43px;
+    }
   }
 
   &__logo {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @include media-breakpoint-down(md) {
+      justify-content: flex-start;
+    }
   }
 
 
@@ -63,12 +87,29 @@
     color: $white;
     letter-spacing: 0.6px;
     padding-bottom: 12px;
+
+    &--mobile {
+      display: none;
+    }
+
+    @include media-breakpoint-down(md) {
+      display: none;
+
+      &--mobile {
+        display: block;
+        font-size: 14px;
+        padding-bottom: 12px;
+        padding-left: 6px;
+        letter-spacing: .7px;
+      }
+    }
   }
 
 
   &__ctas {
     display: flex;
     flex-direction: column;
+    margin-right: 66px;
 
     @include media-breakpoint-up(lg) {
       margin-right: 108px;
@@ -84,6 +125,11 @@
     &:hover {
       color: $red;
       text-decoration: none;
+    }
+
+    @include media-breakpoint-down(md) {
+      line-height: 10px;
+      margin-bottom: 18px;
     }
   }
 
@@ -112,6 +158,10 @@
         color: $red;
       }
     }
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 13px;
+    }
   }
 
   &__social-icon {
@@ -133,6 +183,23 @@
     margin-left: 7px;
     margin-top: 1px;
     transition: 0.3s ease;
+  }
+
+  &__newsletter {
+    display: block;
+
+    &--mobile {
+      display: none;
+    }
+
+    @include media-breakpoint-down(md) {
+      display: none;
+
+      &--mobile {
+        display: block;
+        margin-top: 20px;
+      }
+    }
   }
 
   &__newsletter-title {
@@ -198,5 +265,11 @@
     color: #fff;
     line-height: 18px;
     margin-left: 134px;
+
+    @include media-breakpoint-down(md) {
+      margin-left: 0;
+      max-width: 200px;
+      line-height: 16px;
+    }
   }
 }

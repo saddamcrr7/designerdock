@@ -3,6 +3,7 @@
     top: 78px;
     bottom: 78px;
   }
+
   background: $light-green;
 
   &__container {
@@ -15,6 +16,14 @@
   }
 
   @include media-breakpoint-down(md) {
+    padding-top: 70px;
+    padding-bottom: 69px;
+
+
+    .apply-card:first-child {
+      margin-bottom: 71px;
+    }
+
     &__container {
       max-width: 587px + $grid-gutter-width;
     }

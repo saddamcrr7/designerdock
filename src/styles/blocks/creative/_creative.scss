@@ -6,14 +6,14 @@
 
   @include media-breakpoint-down(md) {
     padding: {
-      top: 13px;
+      top: 20px;
       bottom: 67px;
     }
   }
 
   &__container {
     @include make-container();
-    max-width: 623px + $grid-gutter-width;
+    max-width: 610px;
 
     @include media-breakpoint-up(lg) {
       max-width: 1194px + $grid-gutter-width;
@@ -108,7 +108,7 @@
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    margin-bottom: 49px;
+    margin-bottom: 28px;;
 
     @include media-breakpoint-up(lg) {
       padding-left: 66px;
@@ -121,7 +121,7 @@
   }
 
   &__title {
-    font-size: 34px;
+    font-size: 35px;
     letter-spacing: 0.85px;
     color: $black;
     line-height: 41px;
@@ -135,6 +135,9 @@
 
     @include media-breakpoint-down(md) {
       margin-bottom: 25px;
+      letter-spacing: 0.3px;
+      line-height: 42px;
+      margin-bottom: 20px;
     }
   }
 

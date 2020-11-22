@@ -6,6 +6,10 @@
   &__container {
     @include make-container();
     max-width: 955px + $grid-gutter-width;
+
+    @include media-breakpoint-down(md) {
+      max-width: 366px + $grid-gutter-width;
+    }
   }
 
   &__row {
@@ -15,7 +19,20 @@
 
   &__col {
     @include make-col-ready();
-    @include make-col(12 / 5.085)
+
+
+
+    @include media-breakpoint-up(lg) {
+      @include make-col(12 / 5.085)
+    }
+
+    @include make-col(12 / 2);
+
+    @include media-breakpoint-down(md) {
+      &--md-full {
+        @include make-col(12);
+      }
+    }
   }
 
   &__title {
@@ -27,6 +44,22 @@
 
     span {
       color: $light-green;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    padding-top: 144px;
+    padding-bottom: 110px;
+
+    &__container {
+      padding-left: 18px;
+    }
+
+    &__title {
+      margin-top: 13px;
+      font-size: 102px;
+      line-height: 95px;
+      letter-spacing: 2.24px;
     }
   }
 }

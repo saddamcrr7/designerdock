@@ -120,6 +120,12 @@
     &::placeholder {
       color: rgba(#969696, 0.47);
     }
+
+    &--message {
+      &::placeholder {
+        display: none;
+      }
+    }
   }
 
   &__form-btn {
@@ -176,5 +182,57 @@
     z-index: 2;
     opacity: 0;
     cursor: pointer;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding-top: 73px;
+    padding-bottom: 82px;
+
+    &__title {}
+
+    &__sub {
+      letter-spacing: 0.5px;
+      margin-bottom: 46px;
+    }
+
+    &__input {
+      padding: 16px 27px;
+
+      &--message {
+        padding: 20px 27px;
+
+        &::placeholder {
+          display: block;
+        }
+      }
+    }
+
+    &__input-group {
+      margin-bottom: 23px;
+
+      &--switch {
+        margin-bottom: 13px;
+      }
+
+      &--mb-14 {
+        margin-bottom: 13px;
+      }
+    }
+
+    &__file-input-group {
+      height: 55px;
+      margin-top: -5px;
+    }
+
+    &__form-btn {
+      width: 100%;
+      padding: 18px 58px;
+    }
+
+    &__input-label {
+      &--message {
+        display: none;
+      }
+    }
   }
 }

@@ -119,6 +119,10 @@
 
     #{$root}__content{
       padding: 41px 58px 38px 52px;
+
+      @include media-breakpoint-down(md) {
+        padding: 38px 28px 30px 36px;
+      }
     }
   }
 
@@ -126,16 +130,23 @@
     min-height: 419px;
 
     &__content {
-      padding: 32px 31px 29px 33px;
+      padding: 35px 31px 29px 33px;
     }
 
     &__title {
       font-size: 25px;
       line-height: 33px;
+      letter-spacing: 0.25px;
+      margin-bottom: 8px;
+
+      span {
+        display: none;
+      }
     }
 
     &__sub {
       height: 170px;
+      margin-bottom: 12px;
     }
 
     &__btns {
@@ -146,6 +157,8 @@
       width: 100%;
       margin-right: 0;
       margin-bottom: 9px;
+      font-size: 13px;
+      letter-spacing: .5px;
 
       &:last-child {
         margin-bottom: 0;

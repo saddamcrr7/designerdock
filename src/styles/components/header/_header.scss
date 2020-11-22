@@ -8,4 +8,8 @@
     max-width: 1295px + $grid-gutter-width;
     position: relative;
   }
+
+  @include media-breakpoint-down(md) {
+    padding-top: 14px;
+  }
 }

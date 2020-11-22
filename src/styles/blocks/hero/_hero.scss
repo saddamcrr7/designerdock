@@ -125,13 +125,16 @@
 
   &__navbar {
     margin-bottom: 21px;
-    display: flex;
-    align-items: center;
     background-color: rgba($white, 0.40);
     backdrop-filter: blur(15px) brightness(0.9);
     box-shadow: 0 0 30px #0000001A;
-    justify-content: space-between;
     border-radius: 5px;
+  }
+
+  &__navbar-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   &__navbar-link {
@@ -160,7 +163,7 @@
   }
 
   @include media-breakpoint-down(md) {
-    height: 1007px;
+    height: 1012px;
 
     &__content {
       padding-left: 0;
@@ -175,10 +178,19 @@
     &__title {
       font-size: 50px;
       line-height: 47px;
+      letter-spacing: 2.53px;
+      margin-bottom: 7px;
     }
 
     &__sub {
       font-size: 14px;
+      letter-spacing: 0.3px;
+      margin-bottom: 7px;
+      padding-left: 18px;
+    }
+
+    &__content-row {
+      margin-bottom: 28px;
     }
 
     &__ctas {
@@ -186,7 +198,68 @@
     }
 
     &__navbar {
-      margin-bottom: 65px;
+      margin-bottom: 62px;
+      position: relative;
+      backdrop-filter: unset;
+      border-radius: 5px;
     }
+
+    &__navbar-wrapper {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    &__navbar-items {
+      position: absolute;
+      top: calc(100% + 10px);
+      left: 0;
+      background-color: rgba(#B1C100, .62);
+      backdrop-filter: blur(30px);
+      width: 100%;
+      border-radius: 5px;
+      overflow: hidden;
+      height: 0px;
+    }
+
+    &__navbar-link {
+      text-align: left;
+      padding: 16px 14px;
+      border-bottom: 1px solid rgba($white, 0.2);
+      font-size: 14px;
+      font-weight: normal;
+      line-height: 17px;
+    }
+
+    &__navbar-slected {
+      padding: 19px 16px 18px 27px;
+      backdrop-filter: blur(30px);
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+
+    &__navbar-slected-text {
+      font-size: 23px;
+      color: $white;
+      letter-spacing: 0.5px;
+    }
+
+    &__navbar-slected-icon {
+      width: 14px;
+      height: 8px;
+      path {
+        fill: $light-green;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    &__navbar-slected {
+      display: none;
+    }
+
   }
 }

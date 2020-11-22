@@ -235,12 +235,15 @@
   }
 
   @include media-breakpoint-down(md) {
+    padding: 24px 29px 23px 28px;
+
     .lng-switch {
       display: none;
     }
 
     &__brand {
-      margin-left: 0;
+      margin-left: -22px;
+      line-height: 24px;
     }
 
     &__search-input {

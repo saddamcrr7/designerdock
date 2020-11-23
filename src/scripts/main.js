@@ -262,3 +262,51 @@ if (lsElm) {
     lsElm.classList.remove('is-en')
   })
 }
+
+
+// hero select
+
+const selectELm = document.querySelector('.block-hero__navbar-slected')
+const hrNvItems = document.querySelector('.block-hero__navbar-items')
+const navWrapper = document.querySelector('.block-hero__navbar-wrapper')
+const navIcon = document.querySelector('.block-hero__navbar-slected-icon')
+
+if(selectELm) {
+  let isOpen = 0
+  selectELm.addEventListener('click', ()=> {
+    if(isOpen == 0) {
+      isOpen = !0
+      hrNvItems.style.height = `${navWrapper.offsetHeight}px`
+      navIcon.style.transform = 'rotate(180deg)'
+
+    }else {
+      isOpen = 0
+      hrNvItems.style.height = '0px'
+      navIcon.style.transform = 'rotate(0deg)'
+    }
+  })
+}
+
+
+// contact dropdown
+
+const dtoggler = document.querySelector('.contact-dropdown__header')
+const dbody = document.querySelector('.contact-dropdown__body')
+const dWrapper = document.querySelector('.contact-dropdown__wrapper')
+const dIcon = document.querySelector('.contact-dropdown__header-icon')
+
+if(dtoggler) {
+  let isOpen = 0
+  dtoggler.addEventListener('click', ()=> {
+    if(isOpen == 0) {
+      isOpen = !0
+      dbody.style.height = `${dWrapper.offsetHeight}px`
+      dIcon.style.transform = 'rotate(180deg)'
+
+    }else {
+      isOpen = 0
+      dbody.style.height = '0px'
+      dIcon.style.transform = 'rotate(0deg)'
+    }
+  })
+}

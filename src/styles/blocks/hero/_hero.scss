@@ -220,6 +220,7 @@
       border-radius: 5px;
       overflow: hidden;
       height: 0px;
+      transition: 0.3s ease;
     }
 
     &__navbar-link {
@@ -250,6 +251,7 @@
     &__navbar-slected-icon {
       width: 14px;
       height: 8px;
+      transition: 0.3s ease;
 
       path {
         fill: $light-green;

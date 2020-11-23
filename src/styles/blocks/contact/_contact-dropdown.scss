@@ -1,0 +1,62 @@
+.contact-dropdown {
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+
+  width: 100%;
+  position: relative;
+  margin-top: 30px;
+
+  &__header {
+    padding: 19px 16px 18px 27px;
+    backdrop-filter: blur(30px);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    background-color: rgba(#B1C100, .62);
+  }
+
+  &__header-text {
+    font-size: 24px;
+    color: $white;
+    letter-spacing: 0.5px;
+  }
+
+  &__header-icon {
+    width: 14px;
+    height: 8px;
+    transition: 0.3s ease;
+
+    path {
+      fill: $white;
+    }
+  }
+
+  &__body {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    background-color: rgba(#B1C100, .62);
+    backdrop-filter: blur(30px);
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 0px;
+    transition: 0.3s ease;
+    z-index: 5;
+  }
+
+  &__item {
+    text-align: left;
+    padding: 20px 14px;
+    border-bottom: 1px solid rgba($white, 0.2);
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 17px;
+    color: $white;
+  }
+
+
+}

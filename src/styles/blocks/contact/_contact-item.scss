@@ -56,6 +56,9 @@
    &, &:last-child {
       margin-bottom: 20px;
     }
+  }
 
+  @include media-breakpoint-down(sm) {
+    display: none;
   }
 }

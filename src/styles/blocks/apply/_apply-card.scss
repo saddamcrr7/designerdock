@@ -57,7 +57,8 @@
     display: flex;
     align-items: center;
 
-    &, &:hover {
+    &,
+    &:hover {
       color: $red;
       text-decoration: none;
     }
@@ -78,10 +79,12 @@
     font-size: 11px;
     letter-spacing: 0.44px;
     line-height: 13px;
+
     padding: {
       top: 14px;
       bottom: 13px;
     }
+
     border-radius: 10px;
     text-align: center;
     font-weight: bold;
@@ -117,7 +120,7 @@
   &--reverse {
     flex-direction: row-reverse;
 
-    #{$root}__content{
+    #{$root}__content {
       padding: 41px 58px 38px 52px;
 
       @include media-breakpoint-down(md) {
@@ -163,6 +166,50 @@
       &:last-child {
         margin-bottom: 0;
       }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    &__left {
+      display: none;
+    }
+
+    &__content {
+      @include make-col(12);
+      padding: 49px 32px 46px 32px;
+    }
+
+    &__title {
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    &__sub {
+      font-size: 16px;
+      line-height: 36px;
+      letter-spacing: 0.16px;
+    }
+
+    &__btns {
+      margin-top: 33px;
+    }
+
+    &__btn {
+      font-size: 20px;
+      padding: 20px 18px;
+
+      &--green {
+        margin-bottom: 15px;
+      }
+
+      &--outline {
+        font-weight: normal;
+      }
+    }
+
+    &__cta {
+      font-size: 20px;
     }
   }
 }

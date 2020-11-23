@@ -28,4 +28,17 @@
       max-width: 587px + $grid-gutter-width;
     }
   }
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 67px;
+    padding-bottom: 83px;
+
+    .apply-card:first-child {
+      margin-bottom: 50px;
+    }
+
+    &__container {
+      max-width: 344px + $grid-gutter-width;
+    }
+  }
 }

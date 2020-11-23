@@ -250,6 +250,7 @@
     &__navbar-slected-icon {
       width: 14px;
       height: 8px;
+
       path {
         fill: $light-green;
       }
@@ -260,6 +261,29 @@
     &__navbar-slected {
       display: none;
     }
+  }
 
+  @include media-breakpoint-down(sm) {
+    height: 766px;
+
+    &__title {
+      font-size: 36px;
+      letter-spacing: 0.36px;
+      line-height: 42px;
+      margin-bottom: 9.5px;
+    }
+
+    &__sub {
+      display: none;
+    }
+
+    &__btn {
+      margin-bottom: 55px;
+      padding: 17px 73px;
+    }
+
+    &__navbar {
+      margin-bottom: 11px;
+    }
   }
 }

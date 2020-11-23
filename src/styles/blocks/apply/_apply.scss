@@ -39,6 +39,8 @@
 
     &__container {
       max-width: 344px + $grid-gutter-width;
+      padding-right: 21px;
+      padding-left: 12px;
     }
   }
 }

@@ -269,4 +269,8 @@
     }
   }
 
+  @include media-breakpoint-down(sm) {
+    padding: 23px 25px 23px 22px;
+  }
+
 }

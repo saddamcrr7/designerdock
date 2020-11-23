@@ -75,6 +75,7 @@
   }
 
   @include media-breakpoint-down(sm) {
+    overflow-x: hidden;
     &__title {
       font-size: 80px;
       line-height: 80px;

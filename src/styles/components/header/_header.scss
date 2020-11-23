@@ -11,5 +11,10 @@
 
   @include media-breakpoint-down(md) {
     padding-top: 14px;
+
+    &__container {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
   }
 }

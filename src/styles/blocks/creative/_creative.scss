@@ -162,6 +162,10 @@
       max-width: 278px + $grid-gutter-width;
     }
 
+    &__row {
+      align-items: center;
+    }
+
     &__col {
       &--slider {
        width: 340px;
@@ -203,6 +207,19 @@
       &--next {
         right: -4px;
       }
+    }
+  }
+
+  @media (max-width: 340px) {
+    &__col {
+      &--slider {
+       width: 290px;
+       margin-left: 0;
+      }
+    }
+
+    &__slider-item {
+      height: 260px;
     }
   }
 }

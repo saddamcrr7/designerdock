@@ -9,13 +9,17 @@
 
   &__header {
     padding: 19px 16px 18px 27px;
-    backdrop-filter: blur(30px);
     border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
-    background-color: rgba(#B1C100, .62);
+    background-color: rgba(#B1C100, .9);
+
+    @supports(backdrop-filter: blur(30px)) {
+      backdrop-filter: blur(30px);
+      background-color: rgba(#B1C100, .62);
+    }
   }
 
   &__header-text {
@@ -38,14 +42,18 @@
     position: absolute;
     top: calc(100% + 10px);
     left: 0;
-    background-color: rgba(#B1C100, .62);
-    backdrop-filter: blur(30px);
+    background-color: rgba(#B1C100, .9);
     width: 100%;
     border-radius: 5px;
     overflow: hidden;
     height: 0px;
     transition: 0.3s ease;
     z-index: 5;
+
+    @supports(backdrop-filter: blur(30px)) {
+      backdrop-filter: blur(30px);
+      background-color: rgba(#B1C100, .62);
+    }
   }
 
   &__item {

@@ -44,7 +44,7 @@
         color: $white;
         font-size: 15px;
         text-align: center;
-        font-weight: bold;
+        font-weight: 500;
         margin-bottom: 7px;
         transition: 0.5s;
         text-transform: uppercase;
@@ -170,7 +170,7 @@
 
         @include media-breakpoint-down(md) {
             width: divide(390px);
-    
+
             &__header {
                 height: divide(390px);
             }
@@ -178,7 +178,7 @@
 
         @include media-breakpoint-down(sm) {
             width: divide(300px);
-    
+
             &__header {
                 height: divide(300px);
             }

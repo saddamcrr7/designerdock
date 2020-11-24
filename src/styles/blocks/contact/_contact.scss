@@ -81,7 +81,6 @@
       font-size: 80px;
       line-height: 80px;
       letter-spacing: 0;
-      padding-left: 40px;
       margin-top: 38px;
     }
 
@@ -98,6 +97,12 @@
     &__col {
       padding-left: 15px;
       padding-right: 15px;
+    }
+  }
+
+  @include media-breakpoint-between(xs, sm) {
+    &__title {
+      padding-left: 40px;
     }
   }
 }

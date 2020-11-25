@@ -186,3 +186,14 @@
     }
   }
 }
+
+
+.is-ios {
+  .switch__input-suggest {
+    background-color: rgba($light-green, 0.9);
+    box-shadow: 0 3px 20px rgba( $black, 0.5);
+  }
+  .switch__input-suggest-item {
+    color: $white;
+  }
+}

@@ -32,16 +32,11 @@
     left: 0;
     border-radius: 15px;
     overflow: hidden;
-    background-color: rgba($light-green, 0.9);
-    box-shadow: 0 3px 20px rgba( $black, 0.5);
     height: 0px;
     transition: 0.4s ease;
-
-    @supports(backdrop-filter: blur(30px) brightness(0.7)) {
-      backdrop-filter: blur(30px) brightness(0.7);
-      background-color: rgba($light-green, 0.4);
-      box-shadow: none;
-    }
+    backdrop-filter: blur(30px) brightness(0.7);
+    background-color: rgba($light-green, 0.4);
+    box-shadow: none;
   }
 
   &__items {
@@ -131,5 +126,12 @@
 
   &--z-top {
     z-index: 25;
+  }
+}
+
+.is-ios {
+  .select__body {
+    background-color: rgba($light-green, 0.9);
+    box-shadow: 0 3px 20px rgba( $black, 0.5);
   }
 }

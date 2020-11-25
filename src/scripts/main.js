@@ -310,3 +310,12 @@ if(dtoggler) {
     }
   })
 }
+
+
+const classNames = [];
+if (navigator.userAgent.match(/(iPad|iPhone|iPod)/i)) classNames.push('is-ios');
+if (navigator.userAgent.match(/android/i)) classNames.push('is-android');
+
+const html = document.getElementsByTagName('html')[0];
+
+if (html.classList) html.classList.add.apply(html.classList, classNames);

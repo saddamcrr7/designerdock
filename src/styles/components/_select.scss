@@ -66,6 +66,7 @@
   &__tags {
     display: flex;
     align-items: center;
+    margin-left: auto;
   }
 
   &__tag {
@@ -103,6 +104,7 @@
     border-radius: 3px;
     cursor: pointer;
     transition: 0.3s ease;
+    margin-left: auto;
 
     &::before {
       content: "\2713";

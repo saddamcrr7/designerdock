@@ -61,6 +61,11 @@
     &:hover {
       background-color: #2F2F2F;
     }
+
+    @media (max-width: 325px) {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
   }
 
   &__tags {

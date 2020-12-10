@@ -313,8 +313,9 @@ if(dtoggler) {
 
 
 const classNames = [];
-if (navigator.userAgent.match(/(iPad|iPhone|iPod)/i)) classNames.push('is-ios');
-if (navigator.userAgent.match(/android/i)) classNames.push('is-android');
+if (navigator.userAgent.match(/(iPad|iPhone|iPod)/i)) classNames.push('is-ios')
+if (navigator.userAgent.match(/android/i)) classNames.push('is-android')
+if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {classNames.push('is-ios')}
 
 const html = document.getElementsByTagName('html')[0];
 

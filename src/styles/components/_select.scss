@@ -34,9 +34,14 @@
     overflow: hidden;
     height: 0px;
     transition: 0.4s ease;
-    backdrop-filter: blur(30px) brightness(0.7);
-    background-color: rgba($light-green, 0.4);
-    box-shadow: none;
+    background-color: rgba($light-green, 0.9);
+    box-shadow: 0 3px 20px rgba( $black, 0.5);
+
+    @supports(backdrop-filter: blur(30px) brightness(0.7)) {
+      backdrop-filter: blur(30px) brightness(0.7);
+      background-color: rgba($light-green, 0.4);
+      box-shadow: none;
+    }
   }
 
   &__items {

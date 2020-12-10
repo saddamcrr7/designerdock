@@ -111,6 +111,8 @@
     display: flex;
     flex-direction: column;
     margin-right: 66px;
+    list-style: none;
+    padding-left: 0;
 
     @include media-breakpoint-up(lg) {
       margin-right: 108px;
@@ -137,6 +139,8 @@
   &__socials {
     display: flex;
     flex-direction: column;
+    list-style: none;
+    padding-left: 0;
 
     @include media-breakpoint-up(lg) {
       margin-top: 7px;
